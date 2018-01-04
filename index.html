@@ -7,7 +7,7 @@
         <!-- Your CSS -->
         <link type="text/css" rel="stylesheet" href="css/style.css" />
         <!-- jQuery -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <!-- Your Javascript -->
         <script src="js/script.js"></script>
     </head>
@@ -15,9 +15,50 @@
     <body>
         <div class="container">
             <div class="row">
-                // Your HTML HERE
-                
-                
+                <div class="col-12 text-center">
+                  <h1>Pig Latinizer</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-4"></div>
+                <div class="col-xs-4">
+                    <div class="input-group">
+                        <input id="to-latin-input" type="text" class="form-control" placeholder="Your text here">
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-default" id="btn-to-latin">To Pig Latin</button>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-xs-4"></div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-xs-4"></div>
+                <div class="col-xs-4">
+                    <div class="input-group">
+                        <input id="to-english-input" type="text" class="form-control" placeholder="Your text here">
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-default" id="btn-to-english">To English</button>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-xs-4"></div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-xs-4"></div>
+                <div class="col-xs-4">
+                    <div class="input-group">
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-default" id="btn-to-english">To English</button>
+                        </span>
+                        <input id="to-english-input" type="text" class="form-control" placeholder="Your text here">
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-default" id="btn-to-english">To Pig Latin</button>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-xs-4"></div>
             </div>
         </div>
  	</body>

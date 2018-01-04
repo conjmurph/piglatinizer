@@ -4,12 +4,18 @@
 // igpay, banana becomes ananabay, and aadvark becomes aadvarkay.
 // CREATE THE FUNCTIONS BELOW
 
-// Document Ready Function. All of your jQuery should go in here. 
-$( document ).ready(function() {
+// Document Ready Function. All of your jQuery should go in here.
+/*global $*/
+$(document).ready(function() {
+  $("#btn-to-latin").click(function() {
+	var word = $("#to-latin-input").val();
+	$("#to-english-input").val(word);
+  });
   
-
-
-
+  $("#btn-to-english").click(function() {
+	var word = $("#to-english-input").val();
+	$("#to-latin-input").val(word);
+  });
 });
 
 
@@ -19,9 +25,6 @@ $( document ).ready(function() {
 
 
 
-
 // Create the sentenceToPigLatin function that takes a sentence as a parameter
 	//Loops through all the words in the sentence and transforms each word
 	//It should return a transfromed sentance
-
-
