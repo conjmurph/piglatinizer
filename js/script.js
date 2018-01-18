@@ -8,8 +8,8 @@
 /*global $*/
 $(document).ready(function() {
   $("#btn-to-latin").click(function() {
-	var word = $("#to-latin-input").val();
-	$("#to-english-input").val(word);
+	var pigLatinWord = sentenceToPigLatin($("#to-latin-input").val());
+	$("#to-english-input").val(pigLatinWord);
   });
   
   $("#btn-to-english").click(function() {
@@ -20,11 +20,20 @@ $(document).ready(function() {
 
 
 // Create the wordToPigLatin function that takes a word as a parameter and returns a transfromed word. 
-
-
-
-
+function wordToPigLatin(word) {
+	return word + "ay";
+}
 
 // Create the sentenceToPigLatin function that takes a sentence as a parameter
 	//Loops through all the words in the sentence and transforms each word
-	//It should return a transfromed sentance
+	//It should return a transfromed sentence
+function sentenceToPigLatin(sentence) {
+	var words = sentence.split(' ')
+	var latin = wordToPigLatin(words[0]);
+	for (var i=1; i < words.length; i++) {
+		latin = latin + " " + wordToPigLatin(words[i])
+	}
+	return latin;
+	// var translated = words.map(wordToPigLatin);
+	// return translated.join(' ');
+}
